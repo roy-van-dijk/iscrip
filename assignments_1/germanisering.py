@@ -18,7 +18,7 @@ def germaniseer(sentence):
     new_words = []
 
     # Loop through all words in the array
-    for word in words: 
+    for word in words:
         # Capitalize a word
         new_word = word.capitalize()
         # Store the word in the newWord array

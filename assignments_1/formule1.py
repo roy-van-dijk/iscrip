@@ -26,7 +26,7 @@ def print_output(prize, lap_distance, time):
     # Calculatess the amount of laps to be completed to exceed 305 km
     laps = math.ceil(305 / lap_distance)
 
-    # Calculates total race time 
+    # Calculates total race time
     total_time = time * laps
 
     # Check if total time exceeds 2 hours

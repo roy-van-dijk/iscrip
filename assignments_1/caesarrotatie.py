@@ -12,7 +12,7 @@ def main():
     print(decode(rotation_amount, rotation_sentence))
 
 
-# Rotates a string. 
+# Rotates a string.
 # amount = places to rotate
 # sentence = string to rotate
 # direction = direction of the rotation. True = forward, False = backward
