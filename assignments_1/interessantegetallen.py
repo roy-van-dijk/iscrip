@@ -28,6 +28,7 @@ def main():
 
     # Use the calc function to calculate the
     # result for each inputted number and print it
+    print("")
     for number in numbers:
         print(calc(number))
 
