@@ -44,6 +44,7 @@ def T9(word):
 def GSMoniemen(word1, word2):
     return T9(word1) == T9(word2)
 
+
 # Run the main class
 if __name__ == "__main__":
     main()
