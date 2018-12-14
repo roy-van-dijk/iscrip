@@ -2,7 +2,7 @@
 def main():
     # Calculate life expectancy based on details about the 
     # by person using the levensverwachting function
-    expectancy = levensverwachting("man", False, 0, 0, True)
+    expectancy = levensverwachting(geslacht='man', roker=True, sport=2, alcohol=10, fastfood=True)
 
     # Print the life expectancy on screen
     print(expectancy)
