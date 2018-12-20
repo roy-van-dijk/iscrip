@@ -76,7 +76,7 @@ def scoresTonen(scorebord, n=-1):
     results.sort(key=lambda tup: tup[1], reverse=True)
 
     # Return n entries of the results array
-    return results[:n]
+    return results[:n] if n >= 0 else results
 
 
 # Run the main class
