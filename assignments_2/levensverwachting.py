@@ -1,8 +1,8 @@
 # Main class
 def main():
-    # Calculate life expectancy based on details about the 
+    # Calculate life expectancy based on details about the
     # by person using the levensverwachting function
-    expectancy = levensverwachting(geslacht='man', roker=True, sport=2, alcohol=10, fastfood=True)
+    expectancy = levensverwachting('man', True, 2, 10, True)
 
     # Print the life expectancy on screen
     print(expectancy)
@@ -12,7 +12,7 @@ def main():
 # geslacht: Person's gender. Can be either "man" or "vrouw"
 # roker: Whether the person smokes or not. Boolean
 # sport: Amount of hours a week the person sports. Integer
-# alcohol: Glasses of alcohol the person drinks per week. Integer 
+# alcohol: Glasses of alcohol the person drinks per week. Integer
 # fastfood: Whether the person frequently consumes fastfood. Boolean
 def levensverwachting(geslacht, roker, sport, alcohol, fastfood):
     # Initial life expectancy
@@ -36,10 +36,10 @@ def levensverwachting(geslacht, roker, sport, alcohol, fastfood):
         expectancy -= 3
 
     # Subtract half a year for each drink past 7 the person consumes per week.
-    # Add 2 years if the person doesn't drink at all. 
+    # Add 2 years if the person doesn't drink at all.
     if alcohol > 0:
         if (alcohol - 7) > 0:
-            expectancy -= ((alcohol -7) * 0.5)
+            expectancy -= ((alcohol - 7) * 0.5)
     else:
         expectancy += 2
 

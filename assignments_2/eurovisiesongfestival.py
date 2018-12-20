@@ -70,7 +70,7 @@ def scoresTonen(scorebord, n=-1):
         # Add the tuple to the results array
         results.append(tuple)
 
-    # Sort the results array alphabetically 
+    # Sort the results array alphabetically
     results.sort(key=lambda tup: tup[0])
     # Sort the results array again by score
     results.sort(key=lambda tup: tup[1], reverse=True)

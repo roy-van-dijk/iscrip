@@ -1,7 +1,10 @@
+import string
+
+
 # Main class
 def main():
     # Original translations array
-    vertalingen = {'hij':'zij', 'broer':'zus'}
+    vertalingen = {'hij': 'zij', 'broer': 'zus'}
     # Example of vertaal function usage
     print(vertaal('HIJ', vertalingen))
     # Exmaple of geslachtsverandering function usage
@@ -20,7 +23,7 @@ def vertaal(word, dictionary):
             # If the word is in all caps, return the translation in all caps
             if word.isupper():
                 return value.upper()
-            # If the first letter is uppercase, 
+            # If the first letter is uppercase,
             # return the first letter as uppercase
             if word[0].isupper():
                 return value.capitalize()
@@ -34,21 +37,22 @@ def vertaal(word, dictionary):
 # Replaces each occurence of a dictionary entry in a sentence with its
 # corresponding value
 def geslachtsverandering(sentence, dictionary):
-    # Remove period from end of the sentence, TODO change this
-    sentence = sentence[:-1]
-    # Split the sentence into words
-    arr = sentence.split(" ")
-    # New sentence to return laters
-    new_sentence = []
+    # Remove punctuation from sentence
+    translator = sentence.maketrans('', '', string.punctuation)
+    stripped = sentence.translate(translator)
 
-    # For each word in the sentence
-    for a in arr:
-        # Add the translated word from the vertaal function to the new array
-        new_sentence.append(vertaal(a, dictionary))
+    # Sentence words array
+    sentence_words = stripped.split(" ")
 
-    # Join the new sentence array back together with spaces.
-    # Add the period back on the end TODO change this
-    return " ".join(new_sentence) + "."
+    # For each word in the sentence array
+    for old_word in sentence_words:
+        # Translate the word using the vertaal function
+        new_word = vertaal(old_word, dictionary)
+        # Replace the word with the translated word
+        sentence = sentence.replace(old_word, new_word)
+
+    # Return the new translated sentence
+    return sentence
 
 
 # Reverts translated sentence back into the original
