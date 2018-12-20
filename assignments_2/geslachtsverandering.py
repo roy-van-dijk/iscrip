@@ -63,5 +63,6 @@ def geslachtsherstel(sentence, dictionary):
     return geslachtsverandering(sentence, reversed_dictionary)
 
 
+# Run the main class
 if __name__ == "__main__":
     main()
