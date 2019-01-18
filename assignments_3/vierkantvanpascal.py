@@ -12,16 +12,16 @@ def main():
 
 def vierkant(m, n=1):
     square = []
-    for rowIndex in range(0, m):
+    for row_index in range(0, m):
         row = []
-        for colIndex in range(0, m):
-            if rowIndex == 0:
+        for col_index in range(0, m):
+            if row_index == 0:
                 row.append(n)
             else:
-                if colIndex == 0:
+                if col_index == 0:
                     row.append(n)
                 else:
-                    row.append(row[colIndex-1] + square[rowIndex-1][colIndex])
+                    row.append(row[col_index-1] + square[row_index-1][col_index])
         square.append(row)
     return square
 
